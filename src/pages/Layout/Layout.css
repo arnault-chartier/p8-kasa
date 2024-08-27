@@ -1,0 +1,8 @@
+.layout-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 45px;
+    gap: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
