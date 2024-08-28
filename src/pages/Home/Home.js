@@ -1,6 +1,12 @@
+import './Home.css'
+import HomeBanner from "../../components/HomeBanner/HomeBanner"
+
 function Home() {
     return (
-        <div>Accueil</div>
+        <main>
+            <HomeBanner></HomeBanner>
+        </main>
+
     )
 }
 
