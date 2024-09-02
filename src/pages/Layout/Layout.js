@@ -1,13 +1,15 @@
-import React from "react"
 import './Layout.css'
 import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
+import { Outlet } from "react-router-dom"
 
-function Layout({ children }) {
+function Layout() {
     return (
         <div className="layout-body">
-            <Header />
-            {children}
+            <div className="layout-body__wrapper">
+                <Header />
+                <Outlet />
+            </div>
             <Footer />
         </div>
     )

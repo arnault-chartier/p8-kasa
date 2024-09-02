@@ -1,6 +1,11 @@
+import Banner from "../../components/Banner/Banner"
+import AboutBannerBackground from '../../assets/about-banner-background.png'
+
 function About() {
     return (
-        <div>A propos</div>
+        <main>
+            <Banner bannerBackground={AboutBannerBackground} />
+        </main>
     )
 }
 

@@ -1,10 +1,13 @@
 import './Home.css'
-import HomeBanner from "../../components/HomeBanner/HomeBanner"
+import Banner from '../../components/Banner/Banner'
+import PropertiesCards from '../../components/PropertiesCards/PropertiesCards'
+import HomeBannerBackground from '../../assets/home-banner-background.png'
 
 function Home() {
     return (
-        <main>
-            <HomeBanner></HomeBanner>
+        <main className='home-main'>
+            <Banner bannerText='Chez vous, partout et ailleurs' bannerBackground={HomeBannerBackground} />
+            <PropertiesCards />
         </main>
 
     )

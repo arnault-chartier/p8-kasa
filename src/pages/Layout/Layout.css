@@ -6,3 +6,11 @@
     gap: 50px;
     font-family: 'Montserrat', sans-serif;
 }
+
+.layout-body__wrapper {
+    width: 100%;
+    max-width: 1240px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
