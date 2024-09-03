@@ -1,9 +1,10 @@
 import './Card.css'
 
-function Card() {
+function Card({ title, cover }) {
     return (
         <div className='property-card'>
-            <p className='card-title'>Titre de la location</p>
+            <img src={cover} alt={title} className='card-image' />
+            <p className='card-title'>{title}</p>
         </div>
     )
 }
