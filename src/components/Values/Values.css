@@ -1,0 +1,19 @@
+.values-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 108.5px;
+}
+
+.collapse-title {
+    font-size: 24px;
+}
+
+.collapse-button {
+    height: 32px;
+}
+
+.collapse-content {
+    font-size: 18px;
+    padding: 20px;
+}

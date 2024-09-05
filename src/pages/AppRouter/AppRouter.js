@@ -7,11 +7,14 @@ import About from '../About/About'
 import Layout from '../Layout/Layout'
 
 function AppRouter() {
+    // Création du router avec les routes et sous-routes
     const router = createBrowserRouter([
         {
+            // Route parent
             path: "/",
-            element: <Layout />,
+            element: <Layout />, // "Layout" est le composant parent
             children: [
+                // Sous-routes qui s'affichent à l'intérieur du Layout via "Outlet" (composants enfants)
                 {
                     path: "/",
                     element: <Home />,

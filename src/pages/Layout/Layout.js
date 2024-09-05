@@ -7,9 +7,12 @@ function Layout() {
     return (
         <div className="layout-body">
             <div className="layout-body__wrapper">
+                {/* Le Header est affiché en haut de chaque page */}
                 <Header />
+                {/* Outlet rend le contenu des sous-routes (définies dans "AppRouter") ici */}
                 <Outlet />
             </div>
+            {/* Le Footer est affiché en bas de chaque page */}
             <Footer />
         </div>
     )
