@@ -5,15 +5,23 @@
     padding: 0 108.5px;
 }
 
-.collapse-title {
+.collapses-section .collapse-header {
+    padding: 10px 15px;
+}
+
+.collapses-section .collapse-title {
     font-size: 24px;
 }
 
-.collapse-button {
-    height: 32px;
+.collapses-section .collapse-button {
+    height: 34px;
 }
 
-.collapse-content {
+.collapses-section .collapse-content {
     font-size: 18px;
     padding: 20px;
+}
+
+.collapses-section .collapse-content p {
+    margin: 0;
 }

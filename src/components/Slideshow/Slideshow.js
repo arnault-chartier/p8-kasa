@@ -26,7 +26,7 @@ function Slideshow({ slides }) {
     const showControls = slides.length > 1
 
     return (
-        <div className='slideshow'>
+        <section className='slideshow'>
             {/* Affiche le bouton "slide précédente" seulement si plusieurs slides */}
             {showControls && (
                 <button onClick={prevSlide} className='slideshow-prev-button'>
@@ -47,7 +47,7 @@ function Slideshow({ slides }) {
                     {currentIndex + 1}/{slides.length}
                 </div>
             )}
-        </div>
+        </section>
     )
 }
 

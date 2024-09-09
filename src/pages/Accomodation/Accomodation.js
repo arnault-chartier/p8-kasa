@@ -2,6 +2,13 @@ import './Accomodation.css'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Slideshow from '../../components/Slideshow/Slideshow'
+import Title from '../../components/Title/Title'
+import Host from '../../components/Host/Host'
+import Tags from '../../components/Tags/Tags'
+import Rate from '../../components/Rate/Rate'
+import Collapse from '../../components/Collapse/Collapse'
+import arrowUpDesktop from '../../assets/arrow-up-desktop.svg'
+import arrowDownDesktop from '../../assets/arrow-down-desktop.svg'
 
 function Accomodation() {
 
@@ -37,11 +44,35 @@ function Accomodation() {
     }
 
     return (
-        <div>
+        <main className='accomodation-main'>
             <Slideshow slides={accomodation.pictures} />
-            <h1>{accomodation.title}</h1>
-            <p>{accomodation.description}</p>
-        </div>
+            <section className='accomodation-description'>
+                <div className='accomodation-description_main'>
+                    <div className='accomodation-description_title-tags'>
+                        <Title title={accomodation.title} location={accomodation.location} />
+                        <Tags tags={accomodation.tags} />
+                    </div>
+                    <div className='accomodation-description_host-rate'>
+                        <Host name={accomodation.host.name} picture={accomodation.host.picture} />
+                        <Rate rating={accomodation.rating} />
+                    </div>
+                </div>
+                <div className='collapses-container'>
+                    <Collapse title='Description' arrowDown={arrowDownDesktop} arrowUp={arrowUpDesktop}>
+                        {/* Description passée en tant que children */}
+                        <p>{accomodation.description}</p>
+                    </Collapse>
+                    <Collapse title='Équipements' arrowDown={arrowDownDesktop} arrowUp={arrowUpDesktop}>
+                        {/* Liste des équipements passée en tant que children */}
+                        <ul>
+                            {accomodation.equipments.map((item, index) => (
+                                <li key={index}>{item}</li>
+                            ))}
+                        </ul>
+                    </Collapse>
+                </div>
+            </section>
+        </main>
     )
 }
 

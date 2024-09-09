@@ -1,7 +1,7 @@
 import './Collapse.css'
 import { useState } from 'react'
 
-function Collapse({ title, content, arrowUp, arrowDown }) {
+function Collapse({ title, children, arrowUp, arrowDown }) {
     // Déclaration du useState "isOpen" pour gérer l'ouverture ou la fermeture du collapse
     const [isOpen, setIsOpen] = useState(false);
 
@@ -20,8 +20,8 @@ function Collapse({ title, content, arrowUp, arrowDown }) {
                     />
                 </button>
             </div>
-            {/* Affichage conditionnel du contenu seulement quand isOpen est true */}
-            {isOpen && <p className='collapse-content'>{content}</p>}
+            {/* Affichage conditionnel du contenu (enfants) seulement quand isOpen est true */}
+            {isOpen && <div className='collapse-content'>{children}</div>}
         </div>
     )
 }

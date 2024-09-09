@@ -31,10 +31,12 @@ function CollapsesContainer() {
                 <Collapse
                     key={index}
                     title={collapse.title}
-                    content={collapse.content}
                     arrowDown={arrowDownDesktop}
                     arrowUp={arrowUpDesktop}
-                />
+                >
+                    {/* Contenu passé en tant que children */}
+                    <p>{collapse.content}</p>
+                </Collapse>
             ))}
         </section>
     )
