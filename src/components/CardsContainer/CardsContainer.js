@@ -3,6 +3,7 @@ import Card from '../Card/Card'
 import { useEffect, useState } from 'react'
 
 function CardsContainer() {
+
     // Déclaration du useState "accomodations" initialisé avec un tableau vide
     const [accomodations, setAccomodations] = useState([])
 
@@ -19,9 +20,9 @@ function CardsContainer() {
             // Gestion des erreurs potentielles
             console.error('Erreur lors de la récupération des logements :', error)
         }
-    };
+    }
 
-    // Utilisation du useEffect pour appeler la fonction asynchrone au montage du composant
+    // Utilisation de useEffect pour appeler "fetchAccomodations" au montage du composant
     useEffect(() => {
         fetchAccomodations()
     }, []) // Tableau vide en dépendance pour que le code ne s'exécute qu'une seule fois au montage
@@ -30,7 +31,11 @@ function CardsContainer() {
         <section className='cards-section'>
             {accomodations.map((accomodation) => (
                 // Le tableau "accomodations" est parcouru et un composant "Card" est créé pour chaque logement
-                <Card key={accomodation.id} title={accomodation.title} cover={accomodation.cover} />
+                <Card
+                    key={accomodation.id}
+                    id={accomodation.id}
+                    title={accomodation.title}
+                    cover={accomodation.cover} />
             ))}
         </section>
     )

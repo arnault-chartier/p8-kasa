@@ -1,7 +1,7 @@
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from '../Home/Home'
-import Property from '../Property/Property'
+import Accomodation from '../Accomodation/Accomodation'
 import Error from '../Error/Error'
 import About from '../About/About'
 import Layout from '../Layout/Layout'
@@ -25,7 +25,7 @@ function AppRouter() {
                 },
                 {
                     path: "/property/:id",
-                    element: <Property />,
+                    element: <Accomodation />,
                 },
                 {
                     path: "*",
