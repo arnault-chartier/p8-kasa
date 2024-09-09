@@ -5,29 +5,23 @@ function Collapse({ title, content, arrowUp, arrowDown }) {
     // Déclaration du useState "isOpen" pour gérer l'ouverture ou la fermeture du collapse
     const [isOpen, setIsOpen] = useState(false);
 
-    // Affichage lorsque le collapse est ouvert (isOpen est true)
-    return isOpen ? (
+    return (
         <div className='collapse'>
+            {/* En-tête du collapse contenant le titre et un bouton pour ouvrir/fermer */}
             <div className='collapse-header'>
                 <h3 className='collapse-title'>{title}</h3>
-                {/* Bouton pour fermer le collapse, qui change l'état isOpen à false */}
-                <button className='collapse-button' onClick={() => setIsOpen(false)}>
-                    <img src={arrowDown} alt='Flèche pour dérouler' />
+                {/* Bouton qui inverse l'état de isOpen lorsqu'il est cliqué */}
+                <button className='collapse-button' onClick={() => setIsOpen(!isOpen)}>
+                    {/* Affichage de l'icône arrowDown si le collapse est ouvert, sinon arrowUp */}
+                    <img
+                        className='arrow'
+                        src={isOpen ? arrowDown : arrowUp}
+                        alt={isOpen ? 'Flèche pour replier' : 'Flèche pour dérouler'}
+                    />
                 </button>
             </div>
-            {/* Contenu du collapse affiché seulement quand isOpen est true */}
-            <p className='collapse-content'>{content}</p>
-        </div>
-    ) : (
-        // Affichage lorsque le collapse est fermé (isOpen est false)
-        <div className='collapse'>
-            <div className='collapse-header'>
-                <h3 className='collapse-title'>{title}</h3>
-                {/* Bouton pour ouvrir le collapse, qui change l'état isOpen à true */}
-                <button className='collapse-button' onClick={() => setIsOpen(true)}>
-                    <img src={arrowUp} alt='Flèche pour replier' />
-                </button>
-            </div>
+            {/* Affichage conditionnel du contenu seulement quand isOpen est true */}
+            {isOpen && <p className='collapse-content'>{content}</p>}
         </div>
     )
 }

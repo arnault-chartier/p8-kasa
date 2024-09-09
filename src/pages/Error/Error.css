@@ -1,0 +1,27 @@
+.error-section {
+    display: flex;
+    flex-direction: column;
+    gap: 139px;
+    align-items: center;
+}
+
+.error-text-404 {
+    margin: 89px 0 0 0;
+    font-size: 288px;
+    font-weight: bold;
+    color: #FF6060;
+}
+
+.error-text-message {
+    margin: 0;
+    font-size: 36px;
+    font-weight: medium;
+    color: #FF6060;
+}
+
+.error-link-home {
+    margin: 0 0 89px 0;
+    font-size: 18px;
+    font-weight: medium;
+    color: black;
+}

@@ -1,13 +1,13 @@
 import './About.css'
 import Banner from "../../components/Banner/Banner"
 import AboutBannerBackground from '../../assets/about-banner-background.png'
-import Values from "../../components/Values/Values"
+import CollapsesContainer from "../../components/CollapsesContainer/CollapsesContainer"
 
 function About() {
     return (
         <main className="about-main">
             <Banner bannerBackground={AboutBannerBackground} />
-            <Values />
+            <CollapsesContainer />
         </main>
     )
 }

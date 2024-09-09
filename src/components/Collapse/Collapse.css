@@ -20,6 +20,10 @@
     cursor: pointer;
 }
 
+.arrow {
+    transition: all 1s ease-in-out;
+}
+
 .collapse-content {
     margin: 0;
     background-color: rgba(246, 246, 246, 0.45);
