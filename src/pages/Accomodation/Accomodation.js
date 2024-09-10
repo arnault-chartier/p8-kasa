@@ -1,47 +1,44 @@
 import './Accomodation.css'
-import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useLoaderData, redirect } from 'react-router-dom'
 import Slideshow from '../../components/Slideshow/Slideshow'
 import Title from '../../components/Title/Title'
 import Host from '../../components/Host/Host'
 import Tags from '../../components/Tags/Tags'
-import Rate from '../../components/Rate/Rate'
 import Collapse from '../../components/Collapse/Collapse'
+import Rate from '../../components/Rate/Rate'
 import arrowUpDesktop from '../../assets/arrow-up-desktop.svg'
 import arrowDownDesktop from '../../assets/arrow-down-desktop.svg'
 
-function Accomodation() {
-
+// Fonction loader pour récupérer les données du logement 
+// (préchargement des données nécessaires avant le rendu du composant)
+export async function accomodationLoader({ params }) {
     // Récupération de l'ID du logement depuis l'URL "/property/:id"
-    const { id } = useParams()
-
-    // Déclaration du useState "accomodation" initialisé à null
-    const [accomodation, setAccomodation] = useState(null)
-
-    // Fonction asynchrone pour récupérer les données du logement
-    const fetchAccomodation = async () => {
-        try {
-            // Appel à l'API pour récupérer les données du logement en fonction de l'ID
-            const response = await fetch(`http://localhost:8080/api/properties/${id}`)
-            // Conversion de la réponse en JSON
-            const accomodationData = await response.json()
-            // Mise à jour de "accomodation" avec les données extraites
-            setAccomodation(accomodationData)
-        } catch (error) {
-            // Gestion des erreurs potentielles
-            console.error('Erreur lors de la récupération du logement :', error)
+    const { id } = params
+    try {
+        // Appel à l'API pour récupérer les données du logement en fonction de l'ID
+        const response = await fetch(`http://localhost:8080/api/properties/${id}`)
+        if (!response.ok) {
+            // Redirige vers la page d'erreur si la réponse n'est pas correcte
+            throw new Error('Logement non trouvé')
         }
-    }
+        // Conversion de la réponse en JSON
+        const accomodation = await response.json()
 
-    // Utilisation de useEffect pour appeler "fetchAccomodation" au montage du composant
-    useEffect(() => {
-        fetchAccomodation()
-    }, [id]) // Le useEffect se déclenche à chaque changement de l'ID dans l'URL
-
-    // Vérification si les données du logement ne sont pas encore chargées, affiche un message de chargement
-    if (!accomodation) {
-        return <p>Chargement du logement...</p>;
+        // Vérifie si les données de l'hébergement sont valides (vérifie que l'objet a un ID)
+        if (!accomodation || !accomodation.id) {
+            return redirect('/error') // Redirige vers la route d'erreur
+        }
+        return accomodation
+    } catch (error) {
+        // Capture les erreurs réseau ou autres exceptions et redirige vers la page d'erreur
+        console.error('Erreur lors de la récupération du logement :', error)
+        return redirect('/error') // Redirige en cas d'erreur
     }
+}
+
+function Accomodation() {
+    // Récupère les données de l'hébergement via le loader
+    const accomodation = useLoaderData()
 
     return (
         <main className='accomodation-main'>

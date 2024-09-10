@@ -1,7 +1,7 @@
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from '../Home/Home'
-import Accomodation from '../Accomodation/Accomodation'
+import Accomodation, { accomodationLoader } from '../Accomodation/Accomodation'
 import Error from '../Error/Error'
 import About from '../About/About'
 import Layout from '../Layout/Layout'
@@ -26,6 +26,11 @@ function AppRouter() {
                 {
                     path: "/property/:id",
                     element: <Accomodation />,
+                    loader: accomodationLoader,
+                },
+                {
+                    path: "error",
+                    element: <Error />,
                 },
                 {
                     path: "*",
