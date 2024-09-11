@@ -1,5 +1,5 @@
 import './Header.css'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import HeaderLogoDesktop from '../../assets/header-logo-desktop.svg'
 
 function Header() {
@@ -7,8 +7,10 @@ function Header() {
         <header>
             <img src={HeaderLogoDesktop} alt='Logo Kasa'></img>
             <nav>
-                <Link to='/'>Accueil</Link>
-                <Link to='/about'>A propos</Link>
+                {/* Utilisation de NavLink avec une classe active */}
+                {/* Fonction qui permet d'ajouter la classe "active-link" si le lien est actif */}
+                <NavLink to='/' className={({ isActive }) => (isActive ? 'active-link' : '')}>Accueil</NavLink>
+                <NavLink to='/about' className={({ isActive }) => (isActive ? 'active-link' : '')}>A propos</NavLink>
             </nav>
         </header>
     )

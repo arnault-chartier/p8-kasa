@@ -16,12 +16,3 @@
 .collapses-section .collapse-button {
     height: 34px;
 }
-
-.collapses-section .collapse-content {
-    font-size: 18px;
-    padding: 20px;
-}
-
-.collapses-section .collapse-content p {
-    margin: 0;
-}

@@ -7,7 +7,6 @@ import Tags from '../../components/Tags/Tags'
 import Collapse from '../../components/Collapse/Collapse'
 import Rate from '../../components/Rate/Rate'
 import arrowUpDesktop from '../../assets/arrow-up-desktop.svg'
-import arrowDownDesktop from '../../assets/arrow-down-desktop.svg'
 
 // Fonction loader pour récupérer les données du logement 
 // (préchargement des données nécessaires avant le rendu du composant)
@@ -55,11 +54,11 @@ function Accomodation() {
                     </div>
                 </div>
                 <div className='collapses-container'>
-                    <Collapse title='Description' arrowDown={arrowDownDesktop} arrowUp={arrowUpDesktop}>
+                    <Collapse title='Description' arrowUp={arrowUpDesktop}>
                         {/* Description passée en tant que children */}
                         <p>{accomodation.description}</p>
                     </Collapse>
-                    <Collapse title='Équipements' arrowDown={arrowDownDesktop} arrowUp={arrowUpDesktop}>
+                    <Collapse title='Équipements' arrowUp={arrowUpDesktop}>
                         {/* Liste des équipements passée en tant que children */}
                         <ul>
                             {accomodation.equipments.map((item, index) => (

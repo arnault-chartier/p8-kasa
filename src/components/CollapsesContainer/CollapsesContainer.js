@@ -1,7 +1,6 @@
 import './CollapsesContainer.css'
 import Collapse from "../Collapse/Collapse"
 import arrowUpDesktop from '../../assets/arrow-up-desktop.svg'
-import arrowDownDesktop from '../../assets/arrow-down-desktop.svg'
 
 // Tableau de données des collapses
 const collapsesData = [
@@ -28,7 +27,7 @@ function CollapsesContainer() {
         <section className='collapses-section'>
             {/* Utilisation de map pour générer les composants Collapse à partir du tableau de données */}
             {collapsesData.map((collapse, index) => (
-                <Collapse key={index} title={collapse.title} arrowDown={arrowDownDesktop} arrowUp={arrowUpDesktop}>
+                <Collapse key={index} title={collapse.title} arrowUp={arrowUpDesktop}>
                     {/* Contenu passé en tant que children */}
                     <p>{collapse.content}</p>
                 </Collapse>

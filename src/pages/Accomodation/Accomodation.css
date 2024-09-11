@@ -53,17 +53,3 @@
 .collapses-container .collapse-button {
     height: 32px;
 }
-
-.collapses-container .collapse-content {
-    padding: 20px;
-}
-
-.collapses-container .collapse-content p {
-    margin: 0;
-}
-
-.collapses-container .collapse-content ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
