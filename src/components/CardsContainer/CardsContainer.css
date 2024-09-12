@@ -2,7 +2,15 @@
     width: 100%;
     background-color: rgba(246, 246, 246, 1);
     border-radius: 25px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Media query pour les tablettes et mobiles (largeurs inférieures à 1024px) */
+@media (max-width: 1024px) {
+    .cards-section {
+        background-color: white;
+        gap: 20px;
+    }
 }

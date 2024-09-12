@@ -26,3 +26,22 @@
     text-align: center;
     white-space: nowrap;
 }
+
+/* Media query pour les tablettes et mobiles (largeurs inférieures à 1024px) */
+@media (max-width: 1024px) {
+    .banner {
+        height: 111px;
+    }
+
+    .banner-image {
+        border-radius: 10px;
+    }
+
+    .banner-text {
+        left: 40%;
+        font-size: 24px;
+        text-align: left;
+        white-space: normal;
+        width: 225px;
+    }
+}

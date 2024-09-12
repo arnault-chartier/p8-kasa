@@ -72,3 +72,10 @@
     padding: 0;
     list-style-type: none;
 }
+
+/* Media query pour les tablettes et mobiles (largeurs inférieures à 1024px) */
+@media (max-width: 1024px) {
+    .collapse-content {
+        font-size: 12px;
+    }
+}

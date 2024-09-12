@@ -6,3 +6,11 @@
 .rate-star {
     padding: 0 5px;
 }
+
+/* Media query pour les tablettes et mobiles (largeurs inférieures à 1024px) */
+@media (max-width: 1024px) {
+    .rate-star {
+        width: 18px;
+        padding: 0 1px;
+    }
+}

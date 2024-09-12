@@ -21,3 +21,19 @@ nav a {
 nav a.active-link {
     text-decoration: underline;
 }
+
+/* Media query pour les tablettes et mobiles (largeurs inférieures à 1024px) */
+@media (max-width: 1024px) {
+    header img {
+        width: 145px;
+    }
+
+    nav {
+        gap: 26px;
+    }
+
+    nav a {
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+}

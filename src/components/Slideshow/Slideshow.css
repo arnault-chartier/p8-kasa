@@ -43,3 +43,28 @@
     color: white;
     font-size: 18px;
 }
+
+/* Media query pour les tablettes et mobiles (largeurs inférieures à 1024px) */
+@media (max-width: 1024px) {
+    .slideshow {
+        height: 255px;
+    }
+
+    .slideshow-slide {
+        border-radius: 10px;
+    }
+
+    .slideshow-prev-button,
+    .slideshow-next-button {
+        padding: 8px;
+    }
+
+    .slideshow-prev-button img,
+    .slideshow-next-button img {
+        width: 12px;
+    }
+
+    .slideshow-counter {
+        display: none;
+    }
+}

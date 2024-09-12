@@ -3,3 +3,10 @@
     flex-direction: column;
     gap: 43px;
 }
+
+/* Media query pour les tablettes et mobiles (largeurs inférieures à 1024px) */
+@media (max-width: 1024px) {
+    .home-main {
+        gap: 22px;
+    }
+}

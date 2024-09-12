@@ -6,7 +6,7 @@
 }
 
 .error-text-404 {
-    margin: 89px 0 0 0;
+    margin-top: 89px;
     font-size: 288px;
     font-weight: bold;
     color: #FF6060;
@@ -15,13 +15,36 @@
 .error-text-message {
     margin: 0;
     font-size: 36px;
-    font-weight: medium;
+    font-weight: 500;
     color: #FF6060;
 }
 
 .error-link-home {
-    margin: 0 0 89px 0;
+    margin-bottom: 89px;
     font-size: 18px;
-    font-weight: medium;
+    font-weight: 500;
     color: black;
+}
+
+/* Media query pour les tablettes et mobiles (largeurs inférieures à 1024px) */
+@media (max-width: 1024px) {
+    .error-section {
+        gap: 113px;
+    }
+
+    .error-text-404 {
+        margin-top: 93px;
+        font-size: 96px;
+    }
+
+    .error-text-message {
+        padding: 0 37.5px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .error-link-home {
+        margin-bottom: 93px;
+        font-size: 14px;
+    }
 }

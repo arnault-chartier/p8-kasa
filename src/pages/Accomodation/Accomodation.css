@@ -29,8 +29,8 @@
 .accomodation-description_host-rate {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: flex-end;
-    gap: 21px;
 }
 
 .collapses-container {
@@ -43,13 +43,60 @@
 }
 
 .collapses-container .collapse-header {
-    padding: 10px 20px;
+    padding: 0 20px;
+    height: 52px;
 }
 
 .collapses-container .collapse-title {
     font-size: 18px;
 }
 
-.collapses-container .collapse-button {
-    height: 32px;
+.collapses-container .collapse-button img {
+    width: 32px;
+}
+
+/* Media query pour les tablettes et mobiles (largeurs inférieures à 1024px) */
+@media (max-width: 1024px) {
+    .accomodation-main {
+        gap: 15px;
+    }
+
+    .accomodation-description {
+        gap: 13px;
+    }
+
+    .accomodation-description_main {
+        flex-direction: column;
+    }
+
+    .accomodation-description_title-tags {
+        gap: 10px;
+    }
+
+    .accomodation-description_host-rate {
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .collapses-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .collapses-container .collapse {
+        width: 100%;
+    }
+
+    .collapses-container .collapse-header {
+        padding: 0 10px;
+        height: 30px;
+    }
+
+    .collapses-container .collapse-title {
+        font-size: 13px;
+    }
+
+    .collapses-container .collapse-button img {
+        width: 16px;
+    }
 }

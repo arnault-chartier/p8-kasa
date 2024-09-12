@@ -6,13 +6,35 @@
 }
 
 .collapses-section .collapse-header {
-    padding: 10px 15px;
+    height: 52px;
+    padding: 0 20px 0 15px;
 }
 
 .collapses-section .collapse-title {
     font-size: 24px;
 }
 
-.collapses-section .collapse-button {
-    height: 34px;
+.collapses-section .collapse-button img {
+    width: 32px;
+}
+
+/* Media query pour les tablettes et mobiles (largeurs inférieures à 1024px) */
+@media (max-width: 1024px) {
+    .collapses-section {
+        gap: 20px;
+        padding: 0;
+    }
+
+    .collapses-section .collapse-header {
+        height: 30px;
+        padding: 0 12px 0 10px;
+    }
+
+    .collapses-section .collapse-title {
+        font-size: 13px;
+    }
+
+    .collapses-section .collapse-button img {
+        width: 16px;
+    }
 }
