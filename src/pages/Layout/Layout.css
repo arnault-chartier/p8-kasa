@@ -9,6 +9,7 @@
 
 .layout-body__wrapper {
     max-width: 1240px;
+    width: 100%;
     padding: 0 100px;
     display: flex;
     flex-direction: column;
@@ -23,6 +24,7 @@
     }
 
     .layout-body__wrapper {
+        width: auto;
         padding: 0 20px;
         gap: 27px;
     }

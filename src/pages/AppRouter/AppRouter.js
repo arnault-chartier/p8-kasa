@@ -24,7 +24,7 @@ function AppRouter() {
                     element: <About />,
                 },
                 {
-                    path: "/property/:id",
+                    path: "/accomodation/:id",
                     element: <Accomodation />,
                     loader: accomodationLoader,
                 },

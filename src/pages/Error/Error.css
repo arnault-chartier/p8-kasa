@@ -1,4 +1,4 @@
-.error-section {
+.error-main {
     display: flex;
     flex-direction: column;
     gap: 139px;
@@ -6,7 +6,7 @@
 }
 
 .error-text-404 {
-    margin-top: 89px;
+    margin: 89px 0 0 0;
     font-size: 288px;
     font-weight: bold;
     color: #FF6060;
@@ -17,10 +17,11 @@
     font-size: 36px;
     font-weight: 500;
     color: #FF6060;
+    text-align: center;
 }
 
 .error-link-home {
-    margin-bottom: 89px;
+    margin: 0 0 89px 0;
     font-size: 18px;
     font-weight: 500;
     color: black;
@@ -40,7 +41,6 @@
     .error-text-message {
         padding: 0 37.5px;
         font-size: 18px;
-        text-align: center;
     }
 
     .error-link-home {

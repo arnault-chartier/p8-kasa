@@ -32,13 +32,14 @@
     padding: 0 20px;
     /* Padding horizontal constant */
     font-size: 18px;
+    text-align: justify;
     background-color: rgba(246, 246, 246, 0.45);
     border-radius: 5px;
     max-height: 0;
     /* Caché par défaut */
     overflow: hidden;
     /* Assure que le contenu ne déborde pas */
-    transition: max-height 0.3s ease, opacity 0.3s ease;
+    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
     /* Transition sur max-height et opacity */
     opacity: 0;
     /* Caché par défaut */
