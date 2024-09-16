@@ -21,7 +21,7 @@ function Collapse({ title, children, arrowUp }) {
                 </button>
             </div>
             {/* Ajout de la classe 'open' si le collapse est ouvert */}
-            <div className={`collapse-content ${isOpen ? 'open' : ''}`}>
+            <div className={`collapse-content ${isOpen ? 'open' : ''}`} data-testid='collapse-content'>
                 {children}
             </div>
         </div>
